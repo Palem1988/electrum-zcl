@@ -20,8 +20,8 @@ with open('contrib/requirements/requirements-hw.txt') as f:
 
 version = imp.load_source('version', 'electrum/version.py')
 
-if sys.version_info[:3] < (3, 4, 0):
-    sys.exit("Error: Electrum requires Python version >= 3.4.0...")
+if sys.version_info[:3] < (3, 6, 0):
+    sys.exit("Error: Electrum requires Python version >= 3.6.0...")
 
 data_files = []
 
