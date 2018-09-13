@@ -6,7 +6,7 @@ Usage (Mac OS X):
 """
 
 from setuptools import setup
-from plistlib import Plist
+import plistlib
 import requests
 import os
 import shutil
@@ -18,7 +18,7 @@ CERT_PATH = requests.certs.where()
 name = "Electrum BTCP"
 mainscript = 'electrum-btcp'
 
-plist = Plist.fromFile('Info.plist')
+plist = plistlib.fromFile('Info.plist')
 plist.update(dict(CFBundleIconFile='icons/electrum.icns'))
 
 

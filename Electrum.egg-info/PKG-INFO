@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Electrum
+Version: 1.0.0
+Summary: Lightweight ANON Wallet
+Home-page: https://electrum.org
+Author: Thomas Voegtlin
+Author-email: thomasv@electrum.org
+License: MIT Licence
+Description: Lightweight ANON Wallet
+Platform: UNKNOWN
+Provides-Extra: full
+Provides-Extra: fast
+Provides-Extra: gui
+Provides-Extra: hardware
