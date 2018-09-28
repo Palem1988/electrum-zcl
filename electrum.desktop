@@ -2,13 +2,13 @@
 # sudo desktop-file-install electrum.desktop
 
 [Desktop Entry]
-Comment=Lightweight Zclassic Client
+Comment=Lightweight Anon Client
 Exec=electrum %u
-GenericName[en_US]=Zclassic Wallet
-GenericName=Zclassic Wallet
+GenericName[en_US]=Anon Wallet
+GenericName=Anon Wallet
 Icon=electrum
-Name[en_US]=Zclassic Electrum Wallet
-Name=Zclassic Electrum Wallet
+Name[en_US]=Anon Electrum Wallet
+Name=Anon Electrum Wallet
 Categories=Finance;Network;
 StartupNotify=false
 Terminal=false

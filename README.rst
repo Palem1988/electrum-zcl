@@ -9,8 +9,8 @@ Viewing & Sending from Z addresses is not yet supported on this wallet.
 
 Know about your data directory::
 
-    Linux + Mac: ~/.electrum-zcl/
-    Windows: C:\Users\YourUserName\AppData\Roaming\Electrum-zcl\
+    Linux + Mac: ~/.electrum-anon/
+    Windows: C:\Users\YourUserName\AppData\Roaming\Electrum-anon\
 
     ~/.electrum-zcl/wallets/ has your wallet files - BACK UP THIS FOLDER
 
@@ -23,8 +23,8 @@ Development Version
 
 First, clone from Github::
 
-    git clone https://github.com/BTCP-community/electrum-zcl
-    cd electrum-zcl
+    git clone https://github.com/anonymousbitcoin/electrum-anon.git
+    cd electrum-anon
 
 For Mac:
 --------
@@ -50,7 +50,7 @@ Using Homebrew::
     ./create-dmg
 
     # Run the .app in dist/, or
-    ./electrum-zcl
+    ./electrum-anon
 
 For Linux:
 ----------
@@ -86,7 +86,7 @@ Create translations (optional)::
 
 Run::
 
-    ./electrum-zcl
+    ./electrum-anon
 
 
 For Linux with docker:
@@ -132,7 +132,7 @@ To just create binaries, create the 'packages/' directory::
 
     ./contrib/make_packages
 
-(This directory contains the Python dependencies used by Electrum-ZCL.)
+(This directory contains the Python dependencies used by Electrum-Anon.)
 
 
 ZCL Hints and Debug
@@ -151,11 +151,7 @@ Here is a good initial check to determine whether things are working (should suc
 
 The Zclassic Wiki is located at: https://github.com/z-classic/zclassic/wiki. Please use this as a reference and feel free to contribute.
 
-There is also an Electrum-ZCL wiki at: https://github.com/BTCP-community/electrum-zcl/wiki. It contains information about setting up the ElectrumX Server (https://github.com/BTCP-community/electrumx), which is the provider for block and peer data.
-
 --
-
-Here is our roadmap for zk-SNARKs integration: https://github.com/BTCP-community/electrum-zcl/wiki/Shielded-Transactions
 
 
 Original Project Info

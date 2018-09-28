@@ -72,40 +72,40 @@ XPUB_HEADERS = {
 
 class NetworkConstants:
 
-    # https://github.com/z-classic/zclassic/blob/master/src/chainparams.cpp#L103
+    # https://github.com/anonymousbitcoin/anon/blob/master/src/chainparams.cpp#L103
     @classmethod
     def set_mainnet(cls):
         cls.TESTNET = False
         cls.WIF_PREFIX = 0x80
-        cls.ADDRTYPE_P2PKH = [0x1C, 0xB8]
-        cls.ADDRTYPE_P2SH = [0x1C, 0xBD]
+        cls.ADDRTYPE_P2PKH = [0x05, 0x82]
+        cls.ADDRTYPE_P2SH = [0x53, 0x89]
         cls.ADDRTYPE_SHIELDED = [0x16, 0x9A]
-        cls.SEGWIT_HRP = "bc" #TODO zcl has no segwit
-        cls.GENESIS = "0007104ccda289427919efc39dc9e4d499804b7bebc22df55f8b834301260602"
+        cls.SEGWIT_HRP = "bc" #TODO anon has no segwit
+        cls.GENESIS = "053a237d7ad7106e341a403286604df55bfe6f301fc9fff03a06f81c8c565b34"
         cls.DEFAULT_PORTS = {'t': '50001', 's': '50002'}
         cls.DEFAULT_SERVERS = read_json('servers.json', {})
         cls.CHECKPOINTS = read_json('checkpoints.json', [])
         cls.EQUIHASH_N = 200
         cls.EQUIHASH_K = 9
-        cls.HEADERS_URL = "http://headers.zcl-electrum.com/blockchain_headers"
+        # cls.HEADERS_URL = "http://assets.anonfork.io/blockchain_headers"
 
         cls.CHUNK_SIZE = 200
 
-    # https://github.com/z-classic/zclassic/blob/master/src/chainparams.cpp#L234
+    # https://github.com/anonymousbitcoin/anon/blob/master/src/chainparams.cpp#L234
     @classmethod
     def set_testnet(cls):
         cls.TESTNET = True
         cls.WIF_PREFIX = 0xef
-        cls.ADDRTYPE_P2PKH = [0x1D, 0x25]
+        cls.ADDRTYPE_P2PKH = [0x1C, 0xCE]
         cls.ADDRTYPE_P2SH = [0x1C, 0xBA]
         cls.ADDRTYPE_SHIELDED = [0x16, 0xB6]
-        cls.SEGWIT_HRP = "tb" #TODO zcl has no segwit
-        cls.GENESIS = "03e1c4bb705c871bf9bfda3e74b7f8f86bff267993c215a89d5795e3708e5e1f"
+        cls.SEGWIT_HRP = "tb" #TODO anon has no segwit
+        cls.GENESIS = "0411c719ec9d99ce6188074ab174f499d38a8bb009eecec0602e8edd0e55dcfa"
         cls.DEFAULT_PORTS = {'t': '51001', 's': '51002'}
         cls.DEFAULT_SERVERS = read_json('servers_testnet.json', {})
         cls.CHECKPOINTS = read_json('checkpoints_testnet.json', [])
-        cls.EQUIHASH_N = 200
-        cls.EQUIHASH_K = 9
+        cls.EQUIHASH_N = 144
+        cls.EQUIHASH_K = 5
 
         #cls.HEADERS_URL = "http://35.224.186.7/blockchain_headers"
 
@@ -711,7 +711,7 @@ from ecdsa.util import string_to_number, number_to_string
 
 def msg_magic(message):
     length = bfh(var_int(len(message)))
-    return b"\x19Zcash Signed Message:\n" + length + message
+    return b"\x19Anon Signed Message:\n" + length + message
 
 
 def verify_message(address, sig, message):
